@@ -7,6 +7,12 @@
   --selection-background: rgb(33, 103, 174);
 }
 
+.text-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 .navbar {
 		  background-color: #959595;
