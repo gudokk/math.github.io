@@ -6,6 +6,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link href="../style.css" type="text/css" rel="stylesheet">
+  <link href="../bootstrap.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -1270,7 +1271,7 @@
            Заметим, что 
  \(\displaystyle \int\limits_{0}^{+\infty }{x{{e}^{-ax}}\sin x\,dx}=
  \int\limits_{0}^{+\infty }{{{e}^{-ax}}{{\left. \left( -\frac{\partial }{\partial b}\cos \left( bx \right) \right) \right|}_{b=1}}dx}\)
- <a class="tooltip-1">\(=\)<span class="classic">Для просмотра смените уровень
+ <a class="tooltip-1">\(=\)<span class="classic">Для обоснования смените уровень
  </span></a>
  \(\displaystyle {{\left. \left( -\frac{\partial }{\partial b}\int\limits_{0}^{+\infty }{{{e}^{-ax}}\cos \left( bx \right)\,dx} \right) \right|}_{b=1}}\)
    <p>
@@ -1678,7 +1679,15 @@
         <p>Следовательно, \(\displaystyle \forall a&gt;0\) \(\displaystyle I\left( a
            \right)=\frac{1}{2}\ln \left( 1+{{a}^{2}} \right)\).</p>
      </p>
-     </div>
+    <div class="remark">
+      <p class="margin-top">
+        <span class="em-wide">Замечание</span>
+        Использовать для этого теорему об интегрируемости не получится, так как хотя
+        \[I\left( a \right)=\int\limits_{0}^{+\infty }{\frac{1-{{e}^{-ax}}}{x}\cos x\,dx}=\int\limits_{0}^{+\infty }{\left( \int\limits_{0}^{a}{{{e}^{-\gamma x}}\cos x\,d\gamma \,} \right)dx}\],
+        утверждать, что \[\int\limits_{0}^{+\infty }{\left( \int\limits_{0}^{a}{{{e}^{-\gamma x}}\cos x\,d\gamma \,} \right)dx}=\int\limits_{0}^{a}{\left( \int\limits_{0}^{+\infty }{{{e}^{-\gamma x}}\cos x\,dx} \right)d\gamma }\] мы не можем, так как интеграл не является равномерно сходящимся по \[\gamma \] на отрезке \[\left[ 0,a \right]\] хотя бы по причине расходимости этого интеграла при \[\gamma =0\].
+      </p>
+    </div>
+    </div>
   </details>
 </section>
 
@@ -1927,7 +1936,7 @@
      <span class = "em-wide" style="font-size: 20px"> Пример 2.10.</span>
      Докажем, что    \( \displaystyle \int\limits_{0}^{+\infty }{\frac{\sin ax}{x}dx}=\frac{\pi }{2}\,\,\operatorname{sign}a, 
            \displaystyle a\ne 0.\)
-<span>(этот интеграл называют <strong><em>интегралом Дирихле</em></strong>) 
+    <span>(этот интеграл называют <strong><em>интегралом Дирихле</em></strong>) </span>
   </p>
   <br>
   <details class = "margin-top" style = "margin: -10px 0 0 25px; border: 1px solid #A9B8C2;">
@@ -1976,6 +1985,27 @@
            </div>
   </details>
 </section>
+
+  <section>
+    <p class="margin-top" style = "white-space: nowrap" >
+      <span class = "em-wide" style="font-size: 20px">Пример 2.11.</span>
+      Вычислить интегралы Лапласа \[I\left( a \right)=\int\limits_{0}^{+\infty }{\frac{\cos x\left( ax \right)}{1+{{x}^{2}}}\,dx}\] и \[K\left( a \right)=\int\limits_{0}^{+\infty }{\frac{x\sin x\left( ax \right)}{1+{{x}^{2}}}\,dx}\].
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span class = "em-wide" style="font-size: 20px">Ответ:</span><button class="spoiler-button" style="border:2px #A9B8C2  solid;">\(\displaystyle \operatorname{arctg}\frac{a}{b}.\)</button>
+    </p>
+    <br>
+    <details class = "margin-top" style = "margin: -10px 0 0 25px; border: 1px solid #A9B8C2;">
+      <summary style="height: 25px; line-height: 25px; padding-left: 10px; font-size: 16px;  color: #5C5C5C;cursor: pointer;border-left: 3px solid #5C5C5C">Решение</summary>
+    </details>
+  </section>
+  <section class="remark">
+    <div class="normal bg-white">
+    <span class="em-wide">Замечание</span>
+    Обратим внимание на то, что во многих случаях интеграл можно вычислить и по теореме о дифференцируемости и по теореме об интегрируемости (см. примеры 2.4, 2.5, 2.7, 2.9), при этом, очевидно, трудоемкость вычисления одинаковая (так как, по сути, по ходу этих решений берется одна и та же производная и вычисляется один и тот же интеграл), но обоснование возможности применения теоремы для теоремы об интегрирование проще. Более того, можно заметить, что если удалось решить с помощью теоремы об интегрировании, то можно будет переделать это решение на использование теоремы о дифференцировании).
+    Но есть интегралы, для которых либо условия теоремы об интегрировании не выполняются (см. пример 2.8), либо, вообще, не удается ограничиться применением теоремы об интегрировании (см. пример 2.11).
+  </div>
+  </section>
+
 </main>
 <footer class="footer">
   <p>Учебные материалы </p>
