@@ -18,6 +18,15 @@
   }
 }
 
+.px-0 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
 .side-menu > ul {
   padding-left: 0 !important;
 }
