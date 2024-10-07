@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 
 <head>
 	<title>Математический анализ</title>
@@ -210,7 +210,7 @@
 		#navbar {
 		  background-color: #959595;
 		  position: fixed;
-		  display: 
+		  /* display:  */
 		  top: -50px;
 		  width: 100%;
 		  display:block;
@@ -499,6 +499,54 @@
 				</div>
 			</details>
 </section>
+		<section class="remark">
+			<p class="margin-top"><span class="em-wide">Замечание 3.</span> В теореме требуется непрерывность подынтегральной функции, как функции двух переменных.
+				Непрерывности даже по каждой из переменных недостаточно.</p>
+		</section>
+		</br>
+		<details class = "margin-top" style = "margin: -10px 0 0 25px; border: 1px solid #5C5C5C;">
+			<summary style="height: 25px; line-height: 25px; padding-left: 10px; font-size: 16px;  color: #5C5C5C;cursor: pointer;border-left: 3px solid #5C5C5C">Подробнее</summary>
+
+			<div class="proof">
+
+				<p class="padding-top">Рассмотрим интеграл
+				</p>
+				<div class="formula">\(\displaystyle I\left( \gamma  \right)=\int\limits_{0}^{1}{f\left( x,\gamma  \right)dx},\,\,\,\,f\left( x,\gamma  \right)=\left\{ \begin{matrix}
+   \frac{2x{{\gamma }^{2}}}{{{\left( {{x}^{2}}+{{\gamma }^{2}} \right)}^{2}}},\,\,\left( x,\gamma  \right)\ne 0;  \\
+   \,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,0,\,\,\left( x,\gamma  \right)=0.  \\
+\end{matrix} \right.\)
+				</div>
+				на множестве \(\displaystyle \gamma \ge 0\).
+				<p class="padding-top">
+					Очевидно, что функция \(\displaystyle f\left( x,\gamma  \right)\):
+				</p>
+				<p class="padding-top" style="padding-left: 50px">
+					•	\(\displaystyle \forall x\in \left[ 0,1 \right]\) непрерывна по \(\displaystyle \gamma \),
+				</p>
+				<p class="padding-top" style="padding-left: 50px">
+					•	\(\displaystyle \forall \gamma \ge 0\) непрерывна по \(\displaystyle x\),
+				</p>
+					но разрывна в точке \(\displaystyle \left( 0,0 \right)\) как функция двух переменных:
+				<div class="formula">
+					\(\displaystyle \underset{\begin{smallmatrix}
+					\gamma =x, \\
+					x\to 0+
+					\end{smallmatrix}}{\mathop{\lim }}\,f\left( x,\gamma  \right)=\underset{x\to 0+}{\mathop{\lim }}\,+\infty \)
+
+				</div>
+				Вычислим интеграл \(\displaystyle I\left( \gamma  \right)\) для \(\displaystyle \gamma >0\):
+				<div class="formula">
+					\[I\left( \gamma  \right)=\int\limits_{0}^{1}{\frac{2x{{\gamma }^{2}}}{{{\left( {{x}^{2}}+{{\gamma }^{2}} \right)}^{2}}}dx}={{\gamma }^{2}}\int\limits_{0}^{1}{\frac{2x}{{{\left( {{x}^{2}}+{{\gamma }^{2}} \right)}^{2}}}dx}=\]
+				</div>
+				<div class="formula">
+					\[=\left[ t={{x}^{2}}+{{\gamma }^{2}} \right]={{\gamma }^{2}}\int\limits_{{{\gamma }^{2}}}^{1+{{\gamma }^{2}}}{\frac{1}{{{t}^{2}}}dt}={{\gamma }^{2}}\left. \left( -\frac{1}{t} \right) \right|_{t={{\gamma }^{2}}}^{t=1+{{\gamma }^{2}}}=\]
+				</div>
+				<div class="formula">
+					\[={{\gamma }^{2}}\left( -\frac{1}{1+{{\gamma }^{2}}}+\frac{1}{{{\gamma }^{2}}} \right)=\frac{1}{1+{{\gamma }^{2}}}\underset{\,\,\gamma \to 0+\,\,}{\mathop{\to }}\,1\ne 0.\]
+				</div>
+				Поскольку \(\displaystyle I\left( 0 \right)=\int\limits_{0}^{1}{0dx}\), функция \(\displaystyle I\left( \gamma  \right)\) терпит разрыв в точке \(\displaystyle \gamma =0\).
+			</div>
+		</details>
 <br>
 <section class="consequence">
 <p class="margin-top">
@@ -934,6 +982,77 @@ a\le b\left( \gamma \right)\le b, \\ \end{matrix} \right.
 						</div>
 					</details>
 </section>
+		<section class="remark">
+			<p class="margin-top"><span class="em-wide">Замечание 3.</span>
+				Требования теоремы существенны, так как правило Лейбница справедливо не для всех интегралов, зависящих от параметра.
+				Даже если интеграл, зависящий от параметра, является дифференцируемой функцией, для вычисления его производной формула
+				Лейбница может быть неприменима.
+			</p>
+			<br>
+			<details class = "margin-top" style = "margin: -10px 0 0 25px; border: 1px solid #5C5C5C;">
+				<summary style="height: 25px; line-height: 25px; padding-left: 10px; font-size: 16px;  color: #5C5C5C;cursor: pointer;border-left: 3px solid #5C5C5C">Показать пример</summary>
+				<p>
+				<div class="proof normal">
+					<div class="col-blue">
+						<p class="padding-top">
+							В качестве примера [7], рассмотрим интеграл
+						<div class="formula">
+							\(\displaystyle I\left( \gamma  \right)=\int\limits_{0}^{1}{f\left( x,\gamma  \right)dx}, \quad \gamma \in \left[ 0,+\infty  \right),\quad f\left( x,\gamma  \right)=\left\{ \begin{matrix}
+							\frac{{{\gamma }^{3}}}{{{x}^{2}}}{{e}^{-\frac{{{\gamma }^{2}}}{x}}},\,\,x>0;  \\
+							\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,0,\,\,x=0.  \\
+							\end{matrix} \right.
+							\)
+						</div>
+						<p class="padding-top">
+							Покажем, что для него
+						</p>
+						<div class="formula" >
+							\(\displaystyle \; \frac{d}{d\gamma }I\left( \gamma  \right)=\frac{d}{d\gamma }\int\limits_{0}^{1}{f\left( x,\gamma  \right)dx}\ne \int\limits_{0}^{1}{\frac{\partial }{\partial \gamma }f\left( x,\gamma  \right)dx}\),
+						</div>
+							хотя оба интеграла существуют в смысле Римана.
+						<p class="margin-top">
+							1.	Вычислим сначала \(\displaystyle \frac{d}{d\gamma }\int\limits_{0}^{1}{f\left( x,\gamma  \right)dx}\).
+						</p>
+						<p class="margin-top" style="margin-left: 20px">
+						Поскольку \(\displaystyle I\left( 0 \right)=0\; \) и
+						</p>
+						<div class="formula">
+							\(\displaystyle \forall \gamma \ne 0\ \quad I\left( \gamma  \right)=\int\limits_{0}^{1}{\frac{{{\gamma }^{3}}}{{{x}^{2}}}{{e}^{-\frac{{{\gamma }^{2}}}{x}}}dx}=\left[ t=\frac{1}{x} \right]=-\int\limits_{+\infty }^{1}{{{\gamma }^{3}}{{e}^{-{{\gamma }^{2}}t}}dt}=\gamma {{e}^{-{{\gamma }^{2}}}}\),
+						</div>
+						а значит,
+						<div class="formula">
+							\(\displaystyle \frac{d}{d\gamma }\left( \gamma {{e}^{-{{\gamma }^{2}}}} \right)={{e}^{-{{\gamma }^{2}}}}\left( 1-2{{\gamma }^{2}} \right)\).
+						</div>
+							Определим значение производной в точке \(\displaystyle \gamma =0\). Функция \(\displaystyle I\left( \gamma  \right)\) непрерывна и
+						<div class="formula">
+							\(\displaystyle {{{I}'}_{-}}\left( 0 \right)=\underset{\gamma \to 0-}{\mathop{\lim }}\,{{e}^{-{{\gamma }^{2}}}}\left( 1-2{{\gamma }^{2}} \right)=0\),
+						</div>
+						<div class="formula">
+							\(\displaystyle {{{I}'}_{+}}\left( 0 \right)=\underset{\gamma \to 0+}{\mathop{\lim }}\,{{e}^{-{{\gamma }^{2}}}}\left( 1-2{{\gamma }^{2}} \right)=0\),
+						</div>
+						cледовательно, \(\displaystyle \; {I}'\left( 0 \right)=0\).
+						<p class="margin-top">
+							2.	Теперь вычислим интеграл из правой части формулы Лейбница
+						</p>
+						\[\int\limits_{0}^{1}{\frac{\partial }{\partial \gamma }f\left( x,\gamma  \right)dx}=\int\limits_{0}^{1}{{{e}^{-\frac{{{\gamma }^{2}}}{x}}}\left( \frac{3{{\gamma }^{2}}}{{{x}^{2}}}-\frac{2{{\gamma }^{4}}}{{{x}^{3}}} \right)dx}={{e}^{-{{\gamma }^{2}}}}\left( 1-2{{\gamma }^{2}} \right)\].
+						<p class="margin-top">
+							Таким образом в точке \(\displaystyle \gamma =0\)
+						</p>
+						<div class="formula">
+							\(\displaystyle \frac{d}{d\gamma }\int\limits_{0}^{1}{f\left( x,\gamma  \right)dx}=0\), \(\displaystyle \quad \int\limits_{0}^{1}{\frac{\partial }{\partial \gamma }f\left( x,\gamma  \right)dx}=1\).
+						</div>
+						<p class="margin-top"><span class="em-wide">Замечание 1.</span>
+							Все интегралы, которые встречались в данном примере, – собственные, так как подынтегральные функции являются
+							непрерывными функциями по переменной интегрирования.
+						</p>
+						<p class="margin-top"><span class="em-wide">Замечание 2.</span>
+							Рассмотренная в примере подынтегральная функция \(\displaystyle f\left( x,\gamma  \right)\)  является непрерывной по каждой
+							из переменных, но как функция двух переменных терпит разрыв в точке \(\displaystyle \left( 0,0 \right)\) (в этом легко убедиться, полагая \(\displaystyle x={{\gamma }^{2}}\)).
+						</p>
+					</div>
+				</div>
+			</details>
+		</section>
 <!-- <a class="tooltip-1">\( \Gamma \)<span class="classic">Г - произвольный промежуток (интервал, полуинтервал, отрезок,
 			луч, числовая ось).</span></a> -->
 			<div>

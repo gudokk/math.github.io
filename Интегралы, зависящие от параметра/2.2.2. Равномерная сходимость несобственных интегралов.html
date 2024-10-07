@@ -217,7 +217,7 @@
 		#navbar {
 		  background-color: #959595;
 		  position: fixed;
-		  display: 
+		  /* display:  */
 		  top: -50px;
 		  width: 100%;
 		  display:block;
@@ -334,13 +334,17 @@
         <p class="margin-top">
           <span class="em-wide">Замечание.</span>
           Как уже говорилось ранее, сходимость несобственного интеграла \(\displaystyle \int\limits_{a}^{\mathbf{B}}{f\left( x,\gamma  \right)dx}\) на множестве \(\displaystyle \Gamma \) – это по сути поточечная сходимость на множестве \(\displaystyle \Gamma \) функции \(\displaystyle \varphi \left( \eta ,\gamma  \right)=\int\limits_{a}^{\eta }{f\left( x,\gamma  \right)dx}\) при \(\displaystyle \eta \to \mathbf{B},\,\,\eta >a\), т.е.
-          \[I\left( \gamma  \right)=\int\limits_{a}^{\mathbf{B}}{f\left( x,\gamma  \right)dx}\]   \(\displaystyle \Leftrightarrow \)  «\(\displaystyle \forall \gamma \in \Gamma \,\,\varphi \left( \eta ,\gamma  \right)\to I\left( \gamma  \right)\) при \(\displaystyle \eta \to \mathbf{B},\,\,\eta >a\)».
-          Определенная выше равномерная на множестве \(\displaystyle \Gamma \) сходимость несобственного интеграла \(\displaystyle \int\limits_{a}^{\mathbf{B}}{f\left( x,\gamma  \right)dx}\) эквивалентна равномерной на множестве \(\displaystyle \Gamma \) сходимости функции \(\displaystyle \varphi \left( \eta ,\gamma  \right)=\int\limits_{a}^{\eta }{f\left( x,\gamma  \right)dx}\), т.е.
-          « \[\int\limits_{a}^{\mathbf{B}}{f\left( x,\gamma  \right)dx}\] сходится равномерно на множестве \(\displaystyle \Gamma \)»   \(\displaystyle \Leftrightarrow \)
-          «существует функция \[I\left( \gamma  \right)\], определенная на \(\displaystyle \Gamma \) такая, что \[\varphi \left( \eta ,\gamma  \right)\underset{\Gamma }{\mathop{\begin{matrix}
-          \to   \\
-          \to   \\
-          \end{matrix}}}\,I\left( \gamma  \right)\] при \(\displaystyle \eta \to \mathbf{B},\,\,\eta >a\)».
+          \[I\left( \gamma  \right)=\int\limits_{a}^{\mathbf{B}}{f\left( x,\gamma  \right)dx}   \displaystyle \Leftrightarrow   «\displaystyle \forall \gamma \in \Gamma \,\,\varphi \left( \eta ,\gamma  \right)\to I\left( \gamma  \right) \;\;\; при \;\;\; \displaystyle \eta \to \mathbf{B},\,\,\eta >a».\]
+          <p>
+            Определенная выше равномерная на множестве \(\displaystyle \Gamma \) сходимость несобственного интеграла \(\displaystyle \int\limits_{a}^{\mathbf{B}}{f\left( x,\gamma  \right)dx}\) эквивалентна равномерной на множестве \(\displaystyle \Gamma \) сходимости функции \(\displaystyle \varphi \left( \eta ,\gamma  \right)=\int\limits_{a}^{\eta }{f\left( x,\gamma  \right)dx}\), т.е.
+          </p>
+           \[«\int\limits_{a}^{\mathbf{B}}{f\left( x,\gamma  \right)dx} \;\; сходится \;\; равномерно \;\; на \;\; множестве \;\; \displaystyle \Gamma »   \displaystyle \Leftrightarrow \]
+           \[«существует \;\; функция \;\; I\left( \gamma  \right), \;\; определенная \;\; на \;\; \displaystyle \Gamma \;\; такая, \;\; что \;\;  \varphi \left( \eta ,\gamma  \right)\underset{\Gamma }{\mathop{\begin{matrix}
+           \to   \\
+            \to   \\
+
+        \end{matrix}}}\,I\left( \gamma  \right)
+         \;\; при \;\; \displaystyle \eta \to \mathbf{B},\,\,\eta >a».\]
 
         </p>
       </div>
@@ -373,13 +377,14 @@
       <div class="remark">
         <p class="margin-top">
           <span class="em-wide">Замечание.</span>
-          Критерий Коши для несобственного интеграла непосредственно следуют из Критерия Коши сходимости функции \(\displaystyle \varphi \left( \eta ,\gamma  \right)=\int\limits_{a}^{\eta }{f\left( x,\gamma  \right)dx}\):
-          «\[\varphi \left( \eta ,\gamma  \right)\underset{\Gamma }{\mathop{\begin{matrix}
+          Критерий Коши для несобственного интеграла непосредственно следуют из Критерия Коши сходимости функции \(\displaystyle \varphi \left( \eta ,\gamma  \right)=\int\limits_{a}^{\eta }{f\left( x,\gamma  \right)dx}\):<br>
+          \(«\varphi \left( \eta ,\gamma  \right)\underset{\Gamma }{\mathop{\begin{matrix}
           \to   \\
+          
           \to   \\
-          \end{matrix}}}\,I\left( \gamma  \right)\]  при \(\displaystyle \eta \to \mathbf{B},\,\,\eta >a\)»  \(\displaystyle \Leftrightarrow \)
-          \(\displaystyle \forall \varepsilon >0\) \[\exists {{\eta }_{\varepsilon }}\ge a\] \[\forall {\eta }'\in \left( {{\eta }_{\varepsilon }},\mathbf{B} \right)\,\,\,\forall {\eta }''\in \left( {{\eta }_{\varepsilon }},\mathbf{B} \right)\] \[\underset{\gamma \in \Gamma }{\mathop{\sup }}\,\left| \varphi \left( {\eta }'',\gamma  \right)-\varphi \left( {\eta }',\gamma  \right) \right|<\text{ }\!\!\varepsilon\!\!\text{ }\],
-          если учесть, что \[\varphi \left( {\eta }'',\gamma  \right)-\varphi \left( {\eta }',\gamma  \right)=\int\limits_{a}^{{{\eta }''}}{f(x,\gamma )\,dx}-\int\limits_{a}^{{{\eta }'}}{f(x,\gamma )\,dx}=\int\limits_{{{\eta }'}}^{{{\eta }''}}{f(x,\gamma )\,dx}\]
+          \end{matrix}}}\,I\left( \gamma  \right) \;\; при \;\; \displaystyle \eta \to \mathbf{B},\,\,\eta >a»  \displaystyle \Leftrightarrow\) 
+          \[\displaystyle \forall \varepsilon >0 \;\;\;\; \exists {{\eta }_{\varepsilon }}\ge a  \;\;\;\; \forall {\eta }'\in  \left( {{\eta }_{\varepsilon }}, \mathbf{B} \right) \;\;\; \,\,\,\forall  {\eta }''\in \left( {{\eta }_{\varepsilon }},\mathbf{B} \right) \;\;\; \underset{\gamma \in \Gamma }{\mathop{\sup }}\,\left| \varphi \left( {\eta }'',\gamma  \right)-\varphi \left( {\eta }',\gamma  \right) \right|<\text{ }\!\!\varepsilon\!\!\text{ },\]
+          если учесть, что \(\varphi \left( {\eta }'',\gamma  \right)-\varphi \left( {\eta }',\gamma  \right)=\int\limits_{a}^{{{\eta }''}}{f(x,\gamma )\,dx}-\int\limits_{a}^{{{\eta }'}}{f(x,\gamma )\,dx}=\int\limits_{{{\eta }'}}^{{{\eta }''}}{f(x,\gamma )\,dx}\)
         </p>
       </div>
 
